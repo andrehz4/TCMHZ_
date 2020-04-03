@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200403 19:44:03.918" rpa="false">
+<suite id="s1" name="TRANSACOES" source="C:\TCM\TCM_hz\tests\TRANSACOES.robot">
+<kw name="Start Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200403 19:44:04.153" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200403 19:44:04.153" endtime="20200403 19:44:05.219"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:05.219" endtime="20200403 19:44:05.221"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200403 19:44:05.221" endtime="20200403 19:44:05.331"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:04.153" endtime="20200403 19:44:05.331"></status>
+</kw>
+<test id="s1-t1" name="Administrador loga com email e senha válido!">
+<kw name="Tentar logar na RSTP Transações">
+<arguments>
+<arg>rafael.ribeiro@ul.com</arg>
+<arg>S@fra2019</arg>
+<arg>Rascunho</arg>
+</arguments>
+<kw name="Dado que acesso a página login da RSTP" library="setup_hz">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:05.333" level="INFO">Opening url 'https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1256'</msg>
+<status status="PASS" starttime="20200403 19:44:05.333" endtime="20200403 19:44:09.135"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:05.333" endtime="20200403 19:44:09.135"></status>
+</kw>
+<kw name="Quando eu submeto minha credencial de login &quot;${email}&quot; e senha &quot;${password}&quot;" library="setup_hz">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:09.136" level="INFO">Typing text 'rafael.ribeiro@ul.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200403 19:44:09.136" endtime="20200403 19:44:09.257"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:09.257" level="INFO">Typing text 'S@fra2019' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20200403 19:44:09.257" endtime="20200403 19:44:09.349"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_LOGIN}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:09.349" level="INFO">Clicking element 'id:loginButton'.</msg>
+<status status="PASS" starttime="20200403 19:44:09.349" endtime="20200403 19:44:09.401"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:09.136" endtime="20200403 19:44:09.401"></status>
+</kw>
+<kw name="Então devo ir para a página de cadastro do TCM no modo rascunho &quot;${expect_message}&quot;" library="setup_hz">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${TEXTO_ESTA_PRESENTE}</arg>
+<arg>${expect_message}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:09.402" level="INFO">Verifying element '//span[contains(text(),'Rascunho')]' contains exact text 'Rascunho'.</msg>
+<status status="PASS" starttime="20200403 19:44:09.401" endtime="20200403 19:44:14.602"></status>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${TEXTO_ESTA_PRESENTE}</arg>
+</arguments>
+<assign>
+<var>${WebElement}</var>
+</assign>
+<msg timestamp="20200403 19:44:14.609" level="INFO">${WebElement} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5a862627532d7c2cb819b9554a822c5d", element="8493ce50-42f6-4d2b-82e5-2675b3d9b8a0")&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:14.602" endtime="20200403 19:44:14.609"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TEXTO_GUIA_DE_USUARIO_PRESENTE}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:14.609" endtime="20200403 19:44:15.922"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:09.401" endtime="20200403 19:44:15.923"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:05.332" endtime="20200403 19:44:15.923"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200403 19:44:16.264" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-190.png"&gt;&lt;img src="selenium-screenshot-190.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:15.925" endtime="20200403 19:44:16.264"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:15.924" endtime="20200403 19:44:16.264"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:05.331" endtime="20200403 19:44:16.264" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TRANSAÇÕES sem applicabilities">
+<kw name="Cadastro do campo TRANSAÇÕES sem applicabilities">
+<arguments>
+<arg>TESTEHZ</arg>
+<arg>11</arg>
+<arg>2</arg>
+<arg>4</arg>
+</arguments>
+<kw name="Dado que acesso o caso de teste &quot;${caso_de_teste}&quot; e clico no botão de editar &quot;Transações&quot;" library="setup_hz">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+</arguments>
+<msg timestamp="20200403 19:44:16.267" level="INFO">Opening url 'about:blank'</msg>
+<status status="PASS" starttime="20200403 19:44:16.267" endtime="20200403 19:44:16.284"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}#!/${caso_de_teste}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:16.285" level="INFO">Opening url 'https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1256#!/TESTEHZ'</msg>
+<status status="PASS" starttime="20200403 19:44:16.285" endtime="20200403 19:44:16.907"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TEXTO_GUIA_DE_USUARIO_PRESENTE}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:16.907" endtime="20200403 19:44:18.342"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//crfo-panel[@title='${campo_de_atuacao}']//span[@class='glyphicon glyphicon-edit no-padding pull-right']</arg>
+</arguments>
+<msg timestamp="20200403 19:44:18.343" level="INFO">Clicking element '//crfo-panel[@title='Transações']//span[@class='glyphicon glyphicon-edit no-padding pull-right']'.</msg>
+<status status="PASS" starttime="20200403 19:44:18.342" endtime="20200403 19:44:18.810"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:16.267" endtime="20200403 19:44:18.811"></status>
+</kw>
+<kw name="Quando é preenchido o campo transacoes &quot;${transacoes}&quot;, o localizador ${localizador} e o valor ${valor}" library="setup_hz">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:18.811" endtime="20200403 19:44:19.416"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200403 19:44:20.417" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200403 19:44:19.416" endtime="20200403 19:44:20.418"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:20.418" endtime="20200403 19:44:20.458"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:20.459" level="INFO">Clicking element '//table[@class='table table-condensed ng-scope']//th[contains(text(),'Transação')]/../../../..//button[contains(text(),'Adicionar')]'.</msg>
+<status status="PASS" starttime="20200403 19:44:20.458" endtime="20200403 19:44:20.616"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SELECT_INTERFACE)}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:20.616" endtime="20200403 19:44:20.648"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SELECT_INTERFACE)}</arg>
+<arg>${valor}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:20.648" level="INFO">Selecting options from selection list '//td[@class='has-error']//input[@required='required']//..//..//..//select[@ng-model='tx.interfaceType']' by value 4.</msg>
+<status status="PASS" starttime="20200403 19:44:20.648" endtime="20200403 19:44:20.741"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_LOCALIZACAO_IMAGEM_CARTAO)}</arg>
+<arg>${localizador}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:20.741" level="INFO">Typing text '2' into text field '//td[@class='has-error']//input[@required='required']'.</msg>
+<status status="PASS" starttime="20200403 19:44:20.741" endtime="20200403 19:44:20.888"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TD_CAMPO_TRANSACAO}</arg>
+<arg>${transacoes}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:20.889" level="INFO">Typing text '11' into text field '//td[@class='has-error']//input[@name='name']'.</msg>
+<status status="PASS" starttime="20200403 19:44:20.888" endtime="20200403 19:44:21.023"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:18.811" endtime="20200403 19:44:21.023"></status>
+</kw>
+<kw name="Então a seção é salva e o cadastro do campo transações é encerrado" library="setup_hz">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_OK_TRANSACOES}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:21.024" level="INFO">Clicking element '//div[@id='editTcTransactions']//button[@type='button'][contains(text(),'OK')]'.</msg>
+<status status="PASS" starttime="20200403 19:44:21.023" endtime="20200403 19:44:21.293"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200403 19:44:21.610" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-191.png"&gt;&lt;img src="selenium-screenshot-191.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:21.293" endtime="20200403 19:44:21.611"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${BUTTON_SALVAR_DROPDOWN}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:21.611" endtime="20200403 19:44:21.641"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_SALVAR_DROPDOWN}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:21.642" level="INFO">Clicking element '//button[@class='btn btn-link dropdown-toggle']'.</msg>
+<status status="PASS" starttime="20200403 19:44:21.641" endtime="20200403 19:44:21.716"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINKTEXT_CRIAR_NOVA_VERSAO}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:21.716" endtime="20200403 19:44:22.021"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${LINKTEXT_CRIAR_NOVA_VERSAO}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:22.022" level="INFO">Clicking link 'link:Criar nova versão'.</msg>
+<status status="PASS" starttime="20200403 19:44:22.021" endtime="20200403 19:44:22.302"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200403 19:44:27.303" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200403 19:44:22.302" endtime="20200403 19:44:27.303"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:21.023" endtime="20200403 19:44:27.304"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:16.266" endtime="20200403 19:44:27.304"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200403 19:44:27.662" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-192.png"&gt;&lt;img src="selenium-screenshot-192.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:27.305" endtime="20200403 19:44:27.662"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:27.305" endtime="20200403 19:44:27.662"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:16.265" endtime="20200403 19:44:27.662" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TRANSAÇÕES com applicabilities">
+<kw name="Cadastro do campo TRANSAÇÕES com applicabilities">
+<arguments>
+<arg>TESTEHZ2</arg>
+<arg>4</arg>
+<arg>5</arg>
+<arg>6</arg>
+<arg>CDA supported</arg>
+</arguments>
+<kw name="Dado que acesso o caso de teste &quot;${caso_de_teste}&quot; e clico no botão de editar &quot;Transações&quot;" library="setup_hz">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+</arguments>
+<msg timestamp="20200403 19:44:27.665" level="INFO">Opening url 'about:blank'</msg>
+<status status="PASS" starttime="20200403 19:44:27.665" endtime="20200403 19:44:27.694"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}#!/${caso_de_teste}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:27.694" level="INFO">Opening url 'https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1256#!/TESTEHZ2'</msg>
+<status status="PASS" starttime="20200403 19:44:27.694" endtime="20200403 19:44:28.461"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${TEXTO_GUIA_DE_USUARIO_PRESENTE}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:28.462" endtime="20200403 19:44:30.997"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//crfo-panel[@title='${campo_de_atuacao}']//span[@class='glyphicon glyphicon-edit no-padding pull-right']</arg>
+</arguments>
+<msg timestamp="20200403 19:44:30.997" level="INFO">Clicking element '//crfo-panel[@title='Transações']//span[@class='glyphicon glyphicon-edit no-padding pull-right']'.</msg>
+<status status="PASS" starttime="20200403 19:44:30.997" endtime="20200403 19:44:31.309"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:27.664" endtime="20200403 19:44:31.309"></status>
+</kw>
+<kw name="Quando é preenchido o campo transacoes &quot;${transacoes}&quot;, o localizador ${localizador} e o valor ${valor}" library="setup_hz">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:31.310" endtime="20200403 19:44:31.325"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200403 19:44:32.328" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200403 19:44:31.326" endtime="20200403 19:44:32.328"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:32.329" endtime="20200403 19:44:32.389"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_TRANSACAO}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:32.390" level="INFO">Clicking element '//table[@class='table table-condensed ng-scope']//th[contains(text(),'Transação')]/../../../..//button[contains(text(),'Adicionar')]'.</msg>
+<status status="PASS" starttime="20200403 19:44:32.390" endtime="20200403 19:44:32.584"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SELECT_INTERFACE)}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:32.584" endtime="20200403 19:44:32.918"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SELECT_INTERFACE)}</arg>
+<arg>${valor}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:32.918" level="INFO">Selecting options from selection list '//td[@class='has-error']//input[@required='required']//..//..//..//select[@ng-model='tx.interfaceType']' by value 6.</msg>
+<status status="PASS" starttime="20200403 19:44:32.918" endtime="20200403 19:44:33.005"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_LOCALIZACAO_IMAGEM_CARTAO)}</arg>
+<arg>${localizador}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:33.005" level="INFO">Typing text '5' into text field '//td[@class='has-error']//input[@required='required']'.</msg>
+<status status="PASS" starttime="20200403 19:44:33.005" endtime="20200403 19:44:33.118"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TD_CAMPO_TRANSACAO}</arg>
+<arg>${transacoes}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:33.118" level="INFO">Typing text '4' into text field '//td[@class='has-error']//input[@name='name']'.</msg>
+<status status="PASS" starttime="20200403 19:44:33.118" endtime="20200403 19:44:33.210"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:31.309" endtime="20200403 19:44:33.210"></status>
+</kw>
+<kw name="E eu inicio o botão de adicionar applicabilities &quot;${applicabilitie}&quot; em transações" library="setup_hz">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_GRUPO_TRANSAÇOES}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:33.211" endtime="20200403 19:44:33.237"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_ADICIONAR_GRUPO_TRANSAÇOES}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:33.237" level="INFO">Clicking element '(//input[@name='name']//..//..//..//button)[last()]'.</msg>
+<status status="PASS" starttime="20200403 19:44:33.237" endtime="20200403 19:44:33.317"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200403 19:44:34.319" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200403 19:44:33.317" endtime="20200403 19:44:34.319"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${INPUT_NAME_APPLICABILITY_RED}</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:34.320" endtime="20200403 19:44:34.370"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${INPUT_NAME_APPLICABILITY_RED}</arg>
+<arg>BACKSPACE</arg>
+<arg>BACKSPACE</arg>
+<arg>BACKSPACE</arg>
+<arg>BACKSPACE</arg>
+<arg>BACKSPACE</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20200403 19:44:34.371" level="INFO">Sending key(s) ('BACKSPACE', 'BACKSPACE', 'BACKSPACE', 'BACKSPACE', 'BACKSPACE', 'BACKSPACE') to (//input[@spellcheck='false'])[last()] element.</msg>
+<msg timestamp="20200403 19:44:34.969" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:34.970" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20200403 19:44:35.001" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:35.001" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20200403 19:44:35.020" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:35.020" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20200403 19:44:35.037" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:35.037" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20200403 19:44:35.050" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:35.051" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20200403 19:44:35.071" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20200403 19:44:35.071" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20200403 19:44:34.370" endtime="20200403 19:44:35.088"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_NAME_APPLICABILITY_RED}</arg>
+<arg>${applicabilitie}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:35.089" level="INFO">Typing text 'CDA supported' into text field '(//input[@spellcheck='false'])[last()]'.</msg>
+<status status="PASS" starttime="20200403 19:44:35.089" endtime="20200403 19:44:35.341"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//strong[contains(text(),'${applicabilitie}')]</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:35.341" endtime="20200403 19:44:35.387"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//strong[contains(text(),'${applicabilitie}')]</arg>
+</arguments>
+<msg timestamp="20200403 19:44:35.387" level="INFO">Clicking element '//strong[contains(text(),'CDA supported')]'.</msg>
+<status status="PASS" starttime="20200403 19:44:35.387" endtime="20200403 19:44:35.464"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:33.210" endtime="20200403 19:44:35.464"></status>
+</kw>
+<kw name="Então a seção é salva e o cadastro do campo transações é encerrado" library="setup_hz">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_OK_TRANSACOES}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:35.465" level="INFO">Clicking element '//div[@id='editTcTransactions']//button[@type='button'][contains(text(),'OK')]'.</msg>
+<status status="PASS" starttime="20200403 19:44:35.465" endtime="20200403 19:44:35.598"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200403 19:44:35.966" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-193.png"&gt;&lt;img src="selenium-screenshot-193.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:35.598" endtime="20200403 19:44:35.967"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${BUTTON_SALVAR_DROPDOWN}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:35.967" endtime="20200403 19:44:35.995"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_SALVAR_DROPDOWN}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:35.996" level="INFO">Clicking element '//button[@class='btn btn-link dropdown-toggle']'.</msg>
+<status status="PASS" starttime="20200403 19:44:35.995" endtime="20200403 19:44:36.090"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINKTEXT_CRIAR_NOVA_VERSAO}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200403 19:44:36.091" endtime="20200403 19:44:36.394"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${LINKTEXT_CRIAR_NOVA_VERSAO}</arg>
+</arguments>
+<msg timestamp="20200403 19:44:36.394" level="INFO">Clicking link 'link:Criar nova versão'.</msg>
+<status status="PASS" starttime="20200403 19:44:36.394" endtime="20200403 19:44:36.663"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200403 19:44:41.664" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200403 19:44:36.663" endtime="20200403 19:44:41.664"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:35.464" endtime="20200403 19:44:41.665"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:27.664" endtime="20200403 19:44:41.665"></status>
+</kw>
+<kw name="End Test" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200403 19:44:42.062" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-194.png"&gt;&lt;img src="selenium-screenshot-194.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200403 19:44:41.669" endtime="20200403 19:44:42.063"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:41.668" endtime="20200403 19:44:42.063"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:27.663" endtime="20200403 19:44:42.063" critical="yes"></status>
+</test>
+<kw name="End Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200403 19:44:42.065" endtime="20200403 19:44:44.178"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200403 19:44:49.179" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200403 19:44:44.178" endtime="20200403 19:44:49.179"></status>
+</kw>
+<status status="PASS" starttime="20200403 19:44:42.065" endtime="20200403 19:44:49.180"></status>
+</kw>
+<doc>TCM - CAMPO TRANSAÇÕES
+Para que eu possa inserir dados na página de cadastro de cts no TCM
+Sendo um usuário que possui um email e senha com privilégio de administrador
+Quero poder finalizar o cadastro completo com suas applicabilities do campo transações com sucesso
+E encerrar a seção.</doc>
+<status status="PASS" starttime="20200403 19:44:03.919" endtime="20200403 19:44:49.180"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="TRANSACOES">TRANSACOES</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
