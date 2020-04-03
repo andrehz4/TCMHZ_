@@ -19,7 +19,7 @@ ${BUTTON_OK_OBJETIVOS}                          //div[@class='modal-dialog modal
 ${BUTTON_SALVAR_DROPDOWN}                       //button[@class='btn btn-link dropdown-toggle']
 ${LINKTEXT_CRIAR_NOVA_VERSAO}                   link:Criar nova versão   
 ${BUTTON_ADICIONAR_GRUPO_OBJETIVOS}             //textarea[@name='description']//..//..//button
-${INPUT_NAME_APPLICABILITY_RED}                 (//input[@spellcheck='false'])[last()] 
+${INPUT_NAME_APPLICABILITY_RED}                 //input[@spellcheck='false'] 
 ${INPUT_NAME_APPLICABILITY_BLUE}                link:${caso_de_teste}
 ${STRONG_APPLICABILITY}                         //strong[contains(text(),'${applicabilitie}')]
 ${BUTTON_APPLICABILITY_PLUS}                    //button[@ng-click='addField(group);']
@@ -35,4 +35,4 @@ ${INPUT_LOCALIZACAO_IMAGEM_CARTAO)}              //td[@class='has-error']//input
 ${SELECT_INTERFACE)}                             //td[@class='has-error']//input[@required='required']//..//..//..//select[@ng-model='tx.interfaceType']
 ${BUTTON_OK_TRANSACOES}                          //div[@id='editTcTransactions']//button[@type='button'][contains(text(),'OK')]
 ${BUTTON_ADICIONAR_GRUPO_TRANSAÇOES}             (//input[@name='name']//..//..//..//button)[last()] 
-
+${INPUT_APPLICABILITY_RED_TRANSACOES}            (//input[@spellcheck='false'])[last()] 

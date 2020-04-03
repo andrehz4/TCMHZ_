@@ -86,9 +86,9 @@ E eu inicio o botão de adicionar applicabilities "${applicabilitie}" em transa�
     Wait Until Element Is Enabled           ${BUTTON_ADICIONAR_GRUPO_TRANSAÇOES}
     Click Element                           ${BUTTON_ADICIONAR_GRUPO_TRANSAÇOES}
     Sleep       1
-    Wait Until Element Is Visible           ${INPUT_NAME_APPLICABILITY_RED}   
-    Press Keys	                            ${INPUT_NAME_APPLICABILITY_RED}                  BACKSPACE  BACKSPACE   BACKSPACE   BACKSPACE   BACKSPACE   BACKSPACE  
-    Input Text                              ${INPUT_NAME_APPLICABILITY_RED}                  ${applicabilitie}
+    Wait Until Element Is Visible           ${INPUT_APPLICABILITY_RED_TRANSACOES}   
+    Press Keys	                            ${INPUT_APPLICABILITY_RED_TRANSACOES}            BACKSPACE  BACKSPACE   BACKSPACE   BACKSPACE   BACKSPACE   BACKSPACE  
+    Input Text                              ${INPUT_APPLICABILITY_RED_TRANSACOES}            ${applicabilitie}
     Wait Until Element Is Visible           //strong[contains(text(),'${applicabilitie}')]  
     Click Element                           //strong[contains(text(),'${applicabilitie}')]              
 

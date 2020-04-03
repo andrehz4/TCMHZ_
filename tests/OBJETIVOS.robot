@@ -21,7 +21,7 @@ Administrador loga com email e senha válido!
 TRANSAÇÕES sem applicabilities
     [Template]      Cadastro do campo OBJETIVO sem applicabilities
     #CT            #Objetivo                                      
-	TESTEHZ1       1
+	TESTEHZ       1
 
 TRANSAÇÕES com applicabilities
     [Template]      Cadastro do campo OBJETIVO com applicabilities
