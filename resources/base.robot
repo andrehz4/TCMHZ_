@@ -1,10 +1,10 @@
 *** Settings ***
 Library     SeleniumLibrary
-
+Library     Collections
 Resource    elements.robot
 
 *** Variables ***
-${BASE_URL}     https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1256
+${BASE_URL}     https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1259
 
 *** Keywords ***
 Start Session
