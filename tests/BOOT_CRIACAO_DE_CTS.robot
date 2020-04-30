@@ -21,7 +21,7 @@ Administrador loga com email e senha válido!
 CRIAÇÃO DE CTS sem applicabilities
     [Template]      Cadastro do campo CRIAÇÃO DE CTS sem applicabilities
     #CT         
-    		AMEX CHIP - AXP EMV 017 2
+    ESTATISTICA-CH-HF-001
              
     
 *** Keywords ***

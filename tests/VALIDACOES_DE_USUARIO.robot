@@ -20,30 +20,10 @@ Administrador loga com email e senha válido!
 
 VALIDAÇÕES DE USUÁRIO sem applicabilities
     [Template]      Cadastro do campo VALIDAÇÕES DE USUÁRIO sem applicabilities
-    #CT             #Transação      #Valor esperado     #Descrição
-	AMEX CHIP - AXP EMV 001		Venda			Yes		O terminal lê a tarja magnética e solicita a inserção do chip			
-	AMEX CHIP - AXP EMV 002		Venda			Yes		O valor da transação é exibido ao cliente			
-    AMEX CHIP - AXP EMV 004		Venda			Yes		Terminal não exibe Application Label - OU - exibe AMERICAN EXPRESS na tela			
-	AMEX CHIP - AXP EMV 006		Venda			Yes		Transação é aprovada online			
-	AMEX CHIP - AXP EMV 008		Venda			Yes		Transação prossegue quando a senha é ignorada (PIN Bypass)			
-	AMEX CHIP - AXP EMV 017 2		Venda			Yes		Terminal solicita inserção de chip			
-	AMEX CHIP - AXP EMV 017 2		Venda			Yes		Terminal solicita tarja magnética			
-	AMEX CHIP - AXP EMV 017 2		Venda			Yes		O valor da transação é exibido ao cliente			
-	AMEX CHIP - AXP EMV 017 2		Venda			Yes		Transação é negada online			
-	AMEX CHIP - AXP EMV 032		Venda			Yes		O terminal solicita a senha			
-	AMEX CHIP - AXP EMV 032		Venda			No		É exibido linha de assinatura no comprovante			
-	AMEX CHIP - AXP EMV 033		Trx2 Senha Incorreta			Yes		O terminal solicita a senha			
-	AMEX CHIP - AXP EMV 033		Trx2 Senha Incorreta			Yes		O terminal exibe a mensagem Senha Inválida ou mensagem similar			
-	AMEX CHIP - AXP EMV 033		Trx3 Senha correta			Yes		O terminal solicita a senha			
-	AMEX CHIP - AXP EMV 033		Trx3 Senha correta			Yes		Transação é aprovada online			
-    AMEX CHIP - AXP EMV 037		Venda			Yes		Transação prossegue quando a senha é ignorada (PIN Bypass)					
-	AMEX MAG - AXP MAG 002		Venda			Yes		O valor da transação é exibido ao cliente			
-	AMEX MAG - AXP MAG 002		Venda			Yes		No comprovante é impresso linha de assinatura ou assinatura capturada eletronicamente			
-	AMEX CHIP - AXP RCP 001		Venda			Yes		O valor da transação é impresso no comprovante			
-	AMEX CHIP - AXP RCP 001		Venda			Yes		Número do comerciante e / ou nome e endereço do comerciante estão impressos no comprovante			
-    AMEX CTLS - AXP EP023		Venda			Yes		O terminal exibe a mensagem Aprovado ou mensagem similar			
-	AMEX CTLS - AXP EP090		Venda			Yes		O terminal exibe a mensagem Apresente o cartão ou mensagem similar			
-	          
+    #CT             			 #Transação      #Valor esperado     #Descrição
+	ESTATISTICA-CH-HF-001        Venda12         Yes           		Transação foi aprovada	 	
+    ESTATISTICA-CH-HF-001        ESTORNO1        No					Transação foi rejeitada    
+   	          
 
 *** Keywords ***
 Tentar logar na RSTP Validações de Usuário
