@@ -15,30 +15,19 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 TRANSAÇÕES sem applicabilities
     [Template]      Cadastro do campo OBJETIVO sem applicabilities
     #CT                         #Objetivo                                      
-	ESTATISTICA-CH-HF-001		Realizar a validação do mapa de bits e a correta contabilização dos campos em uma mensagem de estatística, quando realizado uma sequência de transações de crédito, débito e voucher, aprovadas com cartões de chip e tarja magnética.
+	TESTEHZ		                TESTEOI
 
 TRANSAÇÕES com applicabilities
     [Template]      Cadastro do campo OBJETIVO com applicabilities
     #CT             #Objetivo                                      #Applicabilities
     ESTATISTICA-CH-HF-001		2Realizar a validação do mapa de bits e a correta contabilização dos campos em uma mensagem de estatística, quando realizado uma sequência de transações de crédito, débito e voucher, aprovadas com cartões de chip e tarja magnética.      CDA supported
                                                        
-
-
-
-
-
-
-
-
-
-
-
 
 
 

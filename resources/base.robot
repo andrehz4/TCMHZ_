@@ -4,7 +4,7 @@ Library     Collections
 Resource    elements.robot
 
 *** Variables ***
-${BASE_URL}     https://rede.selftestplatform.com/tcm/testplan.htm?testplanid=1256
+${BASE_URL}     https://teste-rede.selftestplatform.com/tcm/testplan.htm?testplanid=1183#!/TESTEHZ
 
 *** Keywords ***
 Start Session

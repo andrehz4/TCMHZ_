@@ -15,13 +15,15 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Validação dos registros do cartão
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 VALIDAÇÃO DOS REGISTROS DO CARTÃO sem applicabilities
     [Template]      Cadastro do campo VALIDAÇÃO DOS REGISTROS DO CARTÃO sem applicabilities
-    #CT                         #Transação      #Propriedade    #0-igual a,1-diferente de,2-maior que,3-maior que ou igual a,4-menor que,5-menor que ou igual a,6-contém         #Valor Esperado        #Formato        #Descrição
-    ESTATISTICA-CH-HF-001       Venda12         
+    #CT                         #Transação      #Propriedade        #0-igual a,1-diferente de,2-maior que,3-maior que ou igual a,4-menor que,5-menor que ou igual a,6-contém         #Valor Esperado        #Formato        #Descrição
+    TESTEHZ		                venda			REDE_018 - 6799998900000200010		2		3000		Hex		0200         
+    TESTEHZ		                venda			REDE_018 - 6799998900000200010		2		3000		Hex		0300    
+    TESTEHZ		                venda			REDE_018 - 6799998900000200010		2		3000		Hex		0300       
 
 *** Keywords ***
 Tentar logar na RSTP Validação dos registros do cartão

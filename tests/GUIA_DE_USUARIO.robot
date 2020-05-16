@@ -16,14 +16,14 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Guia de usuário
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 GUIA DE USUÁRIO sem applicabilities
     [Template]      Cadastro do campo GUIA DE USUÁRIO sem applicabilities
     #CT             			#Transação      				#Descrição     	
-	ESTATISTICA-CH-HF-001        Venda12                   		Transação foi aprovada	 	
-    ESTATISTICA-CH-HF-001        ESTORNO1        				Transação foi rejeitada 
+	TESTEHZ                     venda                   		Transação foi aprovada	 	
+    TESTEHZ                     venda        				    Transação foi rejeitada 
 	    
 GUIA DE USUÁRIO com applicabilities
     [Template]      Cadastro do campo GUIA DE USUÁRIO com applicabilities

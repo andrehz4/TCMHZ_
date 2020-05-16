@@ -15,75 +15,17 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Regras de host
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 REGRAS DE HOST sem applicabilities
     [Template]      Cadastro do campo REGRAS DE HOST sem applicabilities
     #CT                         #Transação      #Regra                              #Valor      #Seletor de Perfil  
     TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda2		APPROVE		${EMPTY}		Hex										
 	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda2		SCRIPT_72		06039F5803		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		SCRIPT_72		06039F580106039F580206039F5803		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda2		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda2		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		ACTION		107		ASCII										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda2		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		ACTION		400		ASCII										
-	TESTEHZ		venda		ACTION		400		ASCII										
-	TESTEHZ		venda		ACTION		400		ASCII										
-	TESTEHZ		venda		ACTION		400		ASCII										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		SET_IAD		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		SET_IAD		${EMPTY}		Hex										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		ACTION		117		ASCII										
-	TESTEHZ		venda		ACTION		117		ASCII										
-	TESTEHZ		venda		ACTION		117		ASCII										
-	TESTEHZ		venda		ACTION		106		ASCII										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		ACTION		117		ASCII										
-	TESTEHZ		venda		ACTION		106		ASCII										
-	TESTEHZ		venda		DECLINE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		Hex										
-	TESTEHZ		venda		APPROVE		${EMPTY}		ASCII										
+	TESTEHZ		venda		APPROVE		${EMPTY}		Hex																			
 																								
-																			
-																			
+																																			
 
 *** Keywords ***
 Tentar logar na RSTP Regras de host

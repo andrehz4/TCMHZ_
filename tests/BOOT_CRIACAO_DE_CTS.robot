@@ -15,15 +15,18 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Criação de Cts
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho                     
     
 
 CRIAÇÃO DE CTS sem applicabilities
     [Template]      Cadastro do campo CRIAÇÃO DE CTS sem applicabilities
-    #CT         
-    ESTATISTICA-CH-HF-001
-             
-    
+    #CT         Nome do CT		TRANSACAO		Regra		Valor		formato										
+	TESTEHZ												
+	TESTEHZ2											
+	TESTEHZ3											
+	TESTEHZ4										
+
+            
 *** Keywords ***
 Tentar logar na RSTP Criação de Cts
     [Arguments]     ${email}    ${password}    ${expect_message}

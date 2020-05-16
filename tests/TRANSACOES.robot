@@ -15,14 +15,14 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Transações
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 TRANSAÇÕES sem applicabilities
     [Template]      Cadastro do campo TRANSAÇÕES sem applicabilities
     #CT             			#Transação      	#Localizador Img Cartão    					#0-Magnetic Stripe,1-Contact Chip,2-Contactless Chip,3-Keyed,4-Manual,5-No Keyed,6-None,7-QR Code 
-    ESTATISTICA-CH-HF-001        Venda12              Rede\Contact\REDE_012.xml                   4       
-    ESTATISTICA-CH-HF-001        ESTORNO1            Rede\Contact\REDE_013.xml                    3
+    TESTEHZ		                venda              Rede\Contact\REDE_012.xml                    4       
+    TESTEHZ		                venda              Rede\Contact\REDE_013.xml                    3
     
 TRANSAÇÕES com applicabilities
     [Template]      Cadastro do campo TRANSAÇÕES com applicabilities

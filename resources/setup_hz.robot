@@ -8,10 +8,14 @@ ${campo_de_atuacao}
 ${null} 
 
 *** Keywords ***
+Dado que acesso o site da ELO1
+    Input Text                             id:username      ariane.lourenco@ul.com
+    Input Text                             id:password      ClasSic0622$
+    Click Link                             //button[@name='login']
+
 ###################### Login
 Dado que acesso a página login da RSTP
     Go To       ${BASE_URL}
-
 Quando eu submeto minha credencial de login "${email}" e senha "${password}"
     Input Text                              ${INPUT_EMAIL}                                  ${email}
     Input Text                              ${INPUT_PASSWORD}                               ${password}
@@ -21,7 +25,7 @@ Então devo ir para a página de cadastro do TCM no modo rascunho "${expect_mess
     Element Text Should Be                  ${TEXTO_ESTA_PRESENTE}                          ${expect_message}
     ${WebElement}=                          Get WebElement	                                ${TEXTO_ESTA_PRESENTE}
     Wait Until Element Is Visible           ${TEXTO_GUIA_DE_USUARIO_PRESENTE}               20
-
+    
 
 ######################  Criação de Cts
 Dado que acesso o caso de teste "${caso_de_teste}" e clico no botão de editar Criação de Cts
@@ -294,6 +298,7 @@ Então a seção é salva e o cadastro do campo validações de Usuário é ence
 Dado que acesso o caso de teste "${caso_de_teste}" e clico no botão de editar validação dos registros do cartão
     Go To                                   about:blank
     Go To                                   ${BASE_URL}#!/${caso_de_teste}
+    #https://teste-rede.selftestplatform.com/tcm/testplan.htm?testplanid=1183#!/TESTEHZ
     Sleep                                   2
     Wait Until Element Is Visible           ${SPAN_ESCRITO_VALIDACOES_DE_HOST}                   20
     Set Focus To Element                    ${SPAN_ESCRITO_VALIDACOES_DE_HOST} 
@@ -467,3 +472,8 @@ Então a seção é salva e o cadastro do campo Validação Híbrida é encerrad
     Wait Until Element Is Visible           ${LINKTEXT_CRIAR_NOVA_VERSAO}                          5
     Click Link                              ${LINKTEXT_CRIAR_NOVA_VERSAO}
     Sleep                                   10
+
+
+
+Acesso o site
+        Get to      www.globo.com

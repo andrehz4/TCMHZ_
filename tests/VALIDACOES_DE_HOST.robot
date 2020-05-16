@@ -15,7 +15,7 @@ Test Teardown    End Test
 *** Test Cases ***
 Administrador loga com email e senha válido!
     [Template]                  Tentar logar na RSTP Validações de Host
-    rafael.ribeiro@ul.com       Safra@123                          Rascunho
+    andre.zimermann@ul.com       Rede@123                          Rascunho
     
 
 VALIDAÇÕES DE HOST sem applicabilities
@@ -31,7 +31,7 @@ Tentar logar na RSTP Validações de host
     Dado que acesso a página login da RSTP
     Quando eu submeto minha credencial de login "${email}" e senha "${password}"
     Então devo ir para a página de cadastro do TCM no modo rascunho "${expect_message}"
-
+    k
 Cadastro do campo VALIDAÇÕES DE HOST sem applicabilities
     [Arguments]     ${caso_de_teste}    ${transacao}  ${propriedade}   ${operador}  ${valor_esperado}   ${formato}  ${descricao}    
     
