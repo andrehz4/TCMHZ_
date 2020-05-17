@@ -8,7 +8,7 @@ ${BASE_URL}     https://teste-rede.selftestplatform.com/tcm/testplan.htm?testpla
 
 *** Keywords ***
 Start Session
-    Open Browser                    about:blank      chrome
+    Open Browser                    about:blank      headlesschrome
     Set Selenium Implicit Wait      30
     Maximize Browser Window
 
